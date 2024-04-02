@@ -1,0 +1,8 @@
+"login.email" = "Email";
+"login.email.required" = "Email không được trống";
+"login.email.invalid" = "Email không hợp lệ";
+"login.password" = "Mật khẩu";
+"login.password.required" = "Mật khẩu không đuợc trống";
+"login.password.invalid" = "Mật khẩu không hợp lệ";
+"home.tabTitle" = "Trang chủ";
+"profile.tabTitle" = "Cá nhân";

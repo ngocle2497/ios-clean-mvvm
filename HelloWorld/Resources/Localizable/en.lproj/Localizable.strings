@@ -1,0 +1,8 @@
+"login.email" = "Email";
+"login.email.required" = "Email is required!";
+"login.email.invalid" = "Email is Invalid!";
+"login.password" = "Password";
+"login.password.required" = "Password is reauired!";
+"login.password.invalid" = "Password is Invalid!";
+"home.tabTitle" = "Home";
+"profile.tabTitle" = "Profile";

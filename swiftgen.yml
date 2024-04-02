@@ -1,0 +1,15 @@
+strings:
+  inputs: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Localizable/en.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Localizable/Generated/Strings.swift
+      params:
+        enumName: S10n
+        lookupFunction: localized
+xcassets:
+  inputs: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Assets/Base.xcassets
+  outputs:
+    output: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Assets/Generated/Images.swift
+    templatePath: ${PROJECT_DIR}/swift5.stencil
+    params:
+      enumName: SImages
