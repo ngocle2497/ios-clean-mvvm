@@ -22,11 +22,7 @@ final class StartUpFlowCoordinator {
         let actions = SplashViewModelActions(showOnboardingScreen: showOnboardingScreen, showAuthenticationScreen: showAuthenticationScreen, showAuthorizedScreen: showAuthorizedScreen)
         let vc = dependencies.makeSplashViewController(actions: actions)
 
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    func startFromLogin() {
-        showAuthenticationScreen(true)
+        navigationController?.setViewControllers([vc], animated: true)
     }
     
     private func showOnboardingScreen() {
@@ -36,16 +32,14 @@ final class StartUpFlowCoordinator {
     }
     
     private func showAuthenticationScreen(_ animated: Bool) {
-//        let authenticationSceneDI =  AuthenticationDIContainer()
-//        let flow = authenticationSceneDI.makeAuthenticationSceneFlowCoordinator(navigationController: navigationController)
-//        flow.start(animated: animated)
+        let authenticationSceneDI =  AuthenticationDIContainer()
+        let flow = authenticationSceneDI.makeAuthenticationSceneFlowCoordinator(navigationController: navigationController)
+        flow.start(animated: animated)
     }
     
     private func showAuthorizedScreen(_ animated: Bool) {
-//        let dependencies = AuthorizedSceneDIContainer.Dependencies()
-//        
-//        let authorizedSceneDI =  AuthorizedSceneDIContainer(dependencies: dependencies)
-//        let flow = authorizedSceneDI.makeAuthorizedSceneFlowCoordinator(navigationController: navigationController)
-//        flow.start(animated: animated)
+        let authorizedSceneDI =  AuthorizedSceneDIContainer()
+        let flow = authorizedSceneDI.makeAuthorizedSceneFlowCoordinator(navigationController: navigationController)
+        flow.start(animated: animated)
     }
 }

@@ -12,7 +12,7 @@ final class AppFlowCoordinator {
     
     func start() {
         let startUpSceneDIConatiner = appDIContainer.makeStartUpSceneDIContainer()
-        let flow = startUpSceneDIConatiner.makeStartUpFlowCoordinator(navigationController: navigationController)
+        let flow = startUpSceneDIConatiner.makeStartUpSceneFlowCoordinator(navigationController: navigationController)
         flow.start()
     }
 }

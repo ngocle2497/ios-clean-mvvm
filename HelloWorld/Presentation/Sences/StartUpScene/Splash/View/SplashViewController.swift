@@ -16,8 +16,8 @@ class SplashViewController: ViewController<SplashViewModel> {
     }
     
     private func hideSplash() {
-        UIView.animate(withDuration: 1) {
-            self.iconSplashImageView.transform = CGAffineTransform(scaleX: 4, y: 4)
+        UIView.animate(withDuration: 0.5, delay: 0.5) {
+            self.iconSplashImageView.transform = CGAffineTransform.identity.translatedBy(x: 200, y: -200).scaledBy(x: 0.4, y: 0.4)
             self.iconSplashImageView.alpha = 0
         } completion: { finished in
             if finished {

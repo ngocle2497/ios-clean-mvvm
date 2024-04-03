@@ -28,10 +28,21 @@ class ViewController<VM: ViewModel>: UIViewController {
         super.init(coder: coder)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateStatusBar()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         setupRx()
+    }
+    
+    func updateStatusBar() {
+        UIView.animate(withDuration: 0.3) {
+            self.setNeedsStatusBarAppearanceUpdate()
+        }
     }
     
     func setup() {

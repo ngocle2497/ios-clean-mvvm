@@ -34,7 +34,7 @@ final class StartUpSceneDIContainer: StartUpFlowCoordinatorDependencies {
     
     
     // MARK: - Flow
-    func makeStartUpFlowCoordinator(navigationController: UINavigationController?) -> StartUpFlowCoordinator {
+    func makeStartUpSceneFlowCoordinator(navigationController: UINavigationController?) -> StartUpFlowCoordinator {
         return StartUpFlowCoordinator(navigationController: navigationController, dependencies: self)
     }
 }

@@ -15,13 +15,12 @@ protocol SplashViewModelOutput {
     
 }
 
-typealias SplashViewModelType = SplashViewModelInput & SplashViewModelOutput
-
-final class SplashViewModel:ViewModel, SplashViewModelType {
+final class SplashViewModel: ViewModel, SplashViewModelInput, SplashViewModelOutput {
     
     private let actions: SplashViewModelActions?
     
     // MARK: - Output
+    
     
     // MARK: - Init
     init(actions: SplashViewModelActions?) {

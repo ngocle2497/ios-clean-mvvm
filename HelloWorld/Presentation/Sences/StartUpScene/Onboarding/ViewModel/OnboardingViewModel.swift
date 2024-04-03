@@ -18,14 +18,17 @@ final class OnboardingViewModel: ViewModel, OnboardingViewModelInput, Onboarding
     
     private let actions: OnboardingViewModelActions?
     
+    // MARK: - Output
+    
+    // MARK: - Init
     init(actions: OnboardingViewModelActions?) {
         self.actions = actions
     }
     
 }
 
+// MARK: - Input
 extension OnboardingViewModel {
-    // MARK: - Input
     func saveConfigOnboardingShown() {
         // TODO: Save config Onboarding screen shown.
         LocalStorage.shared.onboardingShown = true
