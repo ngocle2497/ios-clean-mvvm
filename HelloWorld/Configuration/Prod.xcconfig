@@ -1,4 +1,4 @@
-ASSET_NAME=Default
+ASSET_NAME=Image-Prod
 APP_DISPLAY_NAME=Hello World
 BUNDLE_IDENTIFIER=com.hello.world
 VERSION_CODE=1
@@ -8,4 +8,3 @@ DEBUG_PROVISIONING_PROFILE=helloworld_mobile_development
 RELEASE_PROVISIONING_PROFILE=helloworld_mobile_adhoc
 PUBLISH_PROVISIONING_PROFILE=helloworld_mobile_appstore
 APPLE_DEVELOPMENT_TEAM=
-

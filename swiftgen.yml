@@ -7,7 +7,7 @@ strings:
         enumName: S10n
         lookupFunction: localized
 xcassets:
-  inputs: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Assets/Base.xcassets
+  inputs: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Assets/Images/Image-Dev.xcassets
   outputs:
     output: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Assets/Generated/Images.swift
     templatePath: ${PROJECT_DIR}/swift5.stencil

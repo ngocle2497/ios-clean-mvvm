@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		122721852CBF6DDB000C5E32 /* Image-Prod.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842CD65C2BBC69BB00984066 /* Image-Prod.xcassets */; };
 		12A364792BBD11530064FCE2 /* AuthenticationDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A364782BBD11530064FCE2 /* AuthenticationDIContainer.swift */; };
 		12A364802BBD11FC0064FCE2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12A3647F2BBD11FC0064FCE2 /* LoginViewController.xib */; };
 		12A364812BBD11FC0064FCE2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3647E2BBD11FC0064FCE2 /* LoginViewController.swift */; };
@@ -37,7 +38,7 @@
 		840292EA2BBC70F5004EE551 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842CD63A2BBC678500984066 /* SplashViewController.xib */; };
 		842CD5E82BBC5C5500984066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD5E72BBC5C5500984066 /* AppDelegate.swift */; };
 		842CD5EA2BBC5C5500984066 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD5E92BBC5C5500984066 /* SceneDelegate.swift */; };
-		842CD5F12BBC5C5600984066 /* Base.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842CD5F02BBC5C5600984066 /* Base.xcassets */; };
+		842CD5F12BBC5C5600984066 /* Image-Dev.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842CD5F02BBC5C5600984066 /* Image-Dev.xcassets */; };
 		842CD5F42BBC5C5600984066 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 842CD5F32BBC5C5600984066 /* Base */; };
 		842CD6052BBC613A00984066 /* swiftgen.yml in Sources */ = {isa = PBXBuildFile; fileRef = 842CD6042BBC613A00984066 /* swiftgen.yml */; };
 		842CD6072BBC614B00984066 /* swift5.stencil in Sources */ = {isa = PBXBuildFile; fileRef = 842CD6062BBC614B00984066 /* swift5.stencil */; };
@@ -70,6 +71,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		122721862CBF6E20000C5E32 /* Prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Prod.xcconfig; sourceTree = "<group>"; };
 		12A364782BBD11530064FCE2 /* AuthenticationDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDIContainer.swift; sourceTree = "<group>"; };
 		12A3647E2BBD11FC0064FCE2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		12A3647F2BBD11FC0064FCE2 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -98,12 +100,12 @@
 		840292E52BBC6F4E004EE551 /* PoppinsLatin-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoppinsLatin-Medium.ttf"; sourceTree = "<group>"; };
 		842CD5E72BBC5C5500984066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		842CD5E92BBC5C5500984066 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		842CD5F02BBC5C5600984066 /* Base.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Base.xcassets; sourceTree = "<group>"; };
+		842CD5F02BBC5C5600984066 /* Image-Dev.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Image-Dev.xcassets"; sourceTree = "<group>"; };
 		842CD5F32BBC5C5600984066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DefaultLaunch.storyboard; sourceTree = "<group>"; };
 		842CD5F52BBC5C5600984066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		842CD6042BBC613A00984066 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		842CD6062BBC614B00984066 /* swift5.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = swift5.stencil; sourceTree = "<group>"; };
-		842CD6092BBC61F000984066 /* Default.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Default.xcconfig; sourceTree = "<group>"; };
+		842CD6092BBC61F000984066 /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.xcconfig; sourceTree = "<group>"; };
 		842CD60A2BBC623F00984066 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		842CD60D2BBC62FB00984066 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		842CD60F2BBC630E00984066 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
@@ -134,7 +136,7 @@
 		842CD6562BBC693900984066 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		842CD6582BBC695900984066 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		842CD65A2BBC698600984066 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
-		842CD65C2BBC69BB00984066 /* Default.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Default.xcassets; sourceTree = "<group>"; };
+		842CD65C2BBC69BB00984066 /* Image-Prod.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Image-Prod.xcassets"; sourceTree = "<group>"; };
 		B31D31C4ADBFD30603327DC1 /* Pods-HelloWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.release.xcconfig"; path = "Target Support Files/Pods-HelloWorld/Pods-HelloWorld.release.xcconfig"; sourceTree = "<group>"; };
 		D6D0AB6AF888D2FE033438E8 /* Pods-HelloWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.debug.xcconfig"; path = "Target Support Files/Pods-HelloWorld/Pods-HelloWorld.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +153,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		122721802CBF6B1A000C5E32 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				842CD5F02BBC5C5600984066 /* Image-Dev.xcassets */,
+				842CD65C2BBC69BB00984066 /* Image-Prod.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		12A3647A2BBD11CF0064FCE2 /* AuthenticationScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,9 +414,8 @@
 		842CD5FE2BBC607000984066 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				122721802CBF6B1A000C5E32 /* Images */,
 				842CD6592BBC697B00984066 /* Generated */,
-				842CD5F02BBC5C5600984066 /* Base.xcassets */,
-				842CD65C2BBC69BB00984066 /* Default.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -460,7 +470,8 @@
 		842CD6082BBC61AC00984066 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				842CD6092BBC61F000984066 /* Default.xcconfig */,
+				842CD6092BBC61F000984066 /* Dev.xcconfig */,
+				122721862CBF6E20000C5E32 /* Prod.xcconfig */,
 				842CD60A2BBC623F00984066 /* Config.xcconfig */,
 			);
 			path = Configuration;
@@ -737,11 +748,12 @@
 				840292EA2BBC70F5004EE551 /* SplashViewController.xib in Resources */,
 				12A3649D2BBD36660064FCE2 /* RegisterViewController.xib in Resources */,
 				840292E92BBC70EB004EE551 /* DefaultLaunch.storyboard in Resources */,
+				122721852CBF6DDB000C5E32 /* Image-Prod.xcassets in Resources */,
 				12A364802BBD11FC0064FCE2 /* LoginViewController.xib in Resources */,
 				840292E72BBC6F4E004EE551 /* PoppinsLatin-Bold.ttf in Resources */,
 				840292E82BBC6F4E004EE551 /* PoppinsLatin-Medium.ttf in Resources */,
 				842CD6572BBC693900984066 /* Localizable.strings in Resources */,
-				842CD5F12BBC5C5600984066 /* Base.xcassets in Resources */,
+				842CD5F12BBC5C5600984066 /* Image-Dev.xcassets in Resources */,
 				840292E62BBC6F4E004EE551 /* PoppinsLatin-Regular.ttf in Resources */,
 				842CD5F42BBC5C5600984066 /* Base in Resources */,
 				842CD6272BBC652900984066 /* OnboardingViewController.xib in Resources */,
@@ -768,7 +780,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SOURCE=${PROJECT_DIR}/${EXECUTABLE_NAME}/Resources/Assets/${ASSET_NAME}.xcassets\nDES=${PROJECT_DIR}/${EXECUTABLE_NAME}/Resources/Assets/Base.xcassets\necho \"$SOURCE\"\necho \"$DES\"\nif [ ! -d \"${SOURCE}\" ] ; then\n    echo \"Source directory ${SOURCE} not found.\"\n    exit 1\nfi\ncp -R \"${SOURCE}/.\" \"${DES}\"\n";
+			shellScript = "#SOURCE=${PROJECT_DIR}/${EXECUTABLE_NAME}/Resources/Assets/${ASSET_NAME}.xcassets\n#DES=${PROJECT_DIR}/${EXECUTABLE_NAME}/Resources/Assets/Base.xcassets\n#echo \"$SOURCE\"\n#echo \"$DES\"\n#if [ ! -d \"${SOURCE}\" ] ; then\n#    echo \"Source directory ${SOURCE} not found.\"\n#    exit 1\n#fi\n#cp -R \"${SOURCE}/.\" \"${DES}\"\n";
 		};
 		842CD60C2BBC62A700984066 /* Swift Gen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1040,7 +1052,9 @@
 				CURRENT_PROJECT_VERSION = "$(VERSION_CODE)";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = "$(APPLE_DEVELOPMENT_TEAM)";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				EXCLUDED_SOURCE_FILE_NAMES = "Image*.xcassets";
 				GENERATE_INFOPLIST_FILE = YES;
+				INCLUDED_SOURCE_FILE_NAMES = "$(ASSET_NAME).xcassets";
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_DISPLAY_NAME)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1076,7 +1090,9 @@
 				CURRENT_PROJECT_VERSION = "$(VERSION_CODE)";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = "$(APPLE_DEVELOPMENT_TEAM)";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				EXCLUDED_SOURCE_FILE_NAMES = "Image*.xcassets";
 				GENERATE_INFOPLIST_FILE = YES;
+				INCLUDED_SOURCE_FILE_NAMES = "$(ASSET_NAME).xcassets";
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_DISPLAY_NAME)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
