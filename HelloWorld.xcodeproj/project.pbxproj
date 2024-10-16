@@ -159,16 +159,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		122721802CBF6B1A000C5E32 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				842CD5F02BBC5C5600984066 /* Image-Dev.xcassets */,
-				842CD65C2BBC69BB00984066 /* Image-Prod.xcassets */,
-				1227218C2CBF92B4000C5E32 /* Base.xcassets */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
 		12A3647A2BBD11CF0064FCE2 /* AuthenticationScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +391,7 @@
 		842CD5FC2BBC605100984066 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				842CD6522BBC691900984066 /* Generated */,
 				840292E22BBC6F33004EE551 /* Font */,
 				842CD6512BBC691000984066 /* Localizable */,
 				842CD5FE2BBC607000984066 /* Assets */,
@@ -421,8 +412,9 @@
 		842CD5FE2BBC607000984066 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				122721802CBF6B1A000C5E32 /* Images */,
-				842CD6592BBC697B00984066 /* Generated */,
+				842CD5F02BBC5C5600984066 /* Image-Dev.xcassets */,
+				842CD65C2BBC69BB00984066 /* Image-Prod.xcassets */,
+				1227218C2CBF92B4000C5E32 /* Base.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -651,7 +643,6 @@
 		842CD6512BBC691000984066 /* Localizable */ = {
 			isa = PBXGroup;
 			children = (
-				842CD6522BBC691900984066 /* Generated */,
 				842CD6552BBC693900984066 /* Localizable.strings */,
 			);
 			path = Localizable;
@@ -660,16 +651,9 @@
 		842CD6522BBC691900984066 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				842CD6532BBC692200984066 /* Strings.swift */,
-			);
-			path = Generated;
-			sourceTree = "<group>";
-		};
-		842CD6592BBC697B00984066 /* Generated */ = {
-			isa = PBXGroup;
-			children = (
 				1227218E2CBFA191000C5E32 /* BaseAsset.swift */,
 				842CD65A2BBC698600984066 /* Images.swift */,
+				842CD6532BBC692200984066 /* Strings.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -698,6 +682,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 842CD5F82BBC5C5600984066 /* Build configuration list for PBXNativeTarget "HelloWorld" */;
 			buildPhases = (
+				122721902CBFABDD000C5E32 /* ShellScript */,
 				D4551A8801E82B65507B46F7 /* [CP] Check Pods Manifest.lock */,
 				842CD60B2BBC629000984066 /* Setup Configuration */,
 				842CD60C2BBC62A700984066 /* Swift Gen */,
@@ -774,6 +759,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		122721902CBFABDD000C5E32 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
 		842CD60B2BBC629000984066 /* Setup Configuration */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -790,7 +792,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#SOURCE=${PROJECT_DIR}/${EXECUTABLE_NAME}/Resources/Assets/${ASSET_NAME}.xcassets\n#DES=${PROJECT_DIR}/${EXECUTABLE_NAME}/Resources/Assets/Base.xcassets\n\ninput_file=\"${PROJECT_DIR}/${EXECUTABLE_NAME}/Configuration/tmp.xcconfig\"\noutput_file=\"${PROJECT_DIR}/${EXECUTABLE_NAME}/Configuration/Configuration.swift\"\n\n# Start writing to Config.swift\necho \"// Auto-generated configuration file\" > $output_file\necho \"struct Configuration {\" >> $output_file\n\n# Read each line from tmp.xcconfig\nwhile IFS= read -r line\ndo\n  # Skip empty lines and comments\n  if [ -z \"$line\" ] || [[ $line == \\#* ]] || [[ $line == \\/\\/* ]]; then\n    continue\n  fi\n\n  # Parse key-value pairs\n  key=$(echo $line | cut -d '=' -f 1 | xargs)\n  value=$(echo $line | cut -d '=' -f 2 | xargs)\n\n  # Write to Config.swift\n  echo \"    static let $key = \\\"$value\\\"\" >> $output_file\ndone < \"$input_file\"\n\n# Close the struct\necho \"}\" >> $output_file\n";
+			shellScript = "input_file=\"${PROJECT_DIR}/${TARGET_NAME}/Configuration/tmp.xcconfig\"\noutput_file=\"${PROJECT_DIR}/${TARGET_NAME}/Configuration/Configuration.swift\"\n\n# Start writing to Config.swift\necho \"// Auto-generated configuration file\" > $output_file\necho \"struct Configuration {\" >> $output_file\n\n# Read each line from tmp.xcconfig\nwhile IFS= read -r line\ndo\n  # Skip empty lines and comments\n  if [ -z \"$line\" ] || [[ $line == \\#* ]] || [[ $line == \\/\\/* ]]; then\n    continue\n  fi\n\n  # Parse key-value pairs\n  key=$(echo $line | cut -d '=' -f 1 | xargs)\n  value=$(echo $line | cut -d '=' -f 2 | xargs)\n\n  # Write to Config.swift\n  echo \"    static let $key = \\\"$value\\\"\" >> $output_file\ndone < \"$input_file\"\n\n# Close the struct\necho \"}\" >> $output_file\n";
 		};
 		842CD60C2BBC62A700984066 /* Swift Gen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -808,7 +810,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  GENERATED_PATH=${PROJECT_DIR}/${TARGET_NAME}/Resources/Generated\n  mkdir -p \"$GENERATED_PATH\"\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
 		};
 		D4551A8801E82B65507B46F7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
