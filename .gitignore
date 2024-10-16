@@ -2,3 +2,4 @@ Pods/
 .DS_STORE
 tmp.xcconfig
 xcuserdata
+Configuration.swift
