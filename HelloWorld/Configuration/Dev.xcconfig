@@ -4,6 +4,7 @@ BUNDLE_IDENTIFIER=com.hello.world
 VERSION_CODE=1
 VERSION_NAME=1.0.0
 SPLASH_STORYBOARD_NAME=DefaultLaunch
+APP_ICON=AppIcon-Prod
 DEBUG_PROVISIONING_PROFILE=helloworld_mobile_development
 RELEASE_PROVISIONING_PROFILE=helloworld_mobile_adhoc
 PUBLISH_PROVISIONING_PROFILE=helloworld_mobile_appstore

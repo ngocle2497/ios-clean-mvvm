@@ -4,12 +4,25 @@ strings:
     - templateName: structured-swift5
       output: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Localizable/Generated/Strings.swift
       params:
-        enumName: S10n
+        enumName: MLocalize
         lookupFunction: localized
 xcassets:
-  inputs: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Assets/Images/Image-Dev.xcassets
-  outputs:
-    output: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Assets/Generated/Images.swift
-    templatePath: ${PROJECT_DIR}/swift5.stencil
-    params:
-      enumName: SImages
+  - inputs: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Assets/Images/Image-Dev.xcassets
+    outputs:
+        output: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Assets/Generated/Images.swift
+        templatePath: ${PROJECT_DIR}/swift5.stencil
+        params:
+            enumName: MImages
+            imageTypeName: MImageType
+            imageAliasName: MImageAlias
+
+  - inputs: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Assets/Images/Base.xcassets
+    outputs:
+        output: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Assets/Generated/BaseAsset.swift
+        templatePath: ${PROJECT_DIR}/swift5.stencil
+        params:
+            enumName: MBaseAsset
+            imageTypeName: MBaseImageType
+            imageAliasName: MBaseImageAlias
+
+

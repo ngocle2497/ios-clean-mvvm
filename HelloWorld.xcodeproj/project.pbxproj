@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		122721852CBF6DDB000C5E32 /* Image-Prod.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842CD65C2BBC69BB00984066 /* Image-Prod.xcassets */; };
 		1227218B2CBF7A0D000C5E32 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227218A2CBF7A0D000C5E32 /* Configuration.swift */; };
+		1227218D2CBF92B4000C5E32 /* Base.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1227218C2CBF92B4000C5E32 /* Base.xcassets */; };
+		1227218F2CBFA191000C5E32 /* BaseAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227218E2CBFA191000C5E32 /* BaseAsset.swift */; };
 		12A364792BBD11530064FCE2 /* AuthenticationDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A364782BBD11530064FCE2 /* AuthenticationDIContainer.swift */; };
 		12A364802BBD11FC0064FCE2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12A3647F2BBD11FC0064FCE2 /* LoginViewController.xib */; };
 		12A364812BBD11FC0064FCE2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3647E2BBD11FC0064FCE2 /* LoginViewController.swift */; };
@@ -74,6 +76,8 @@
 /* Begin PBXFileReference section */
 		122721862CBF6E20000C5E32 /* Prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Prod.xcconfig; sourceTree = "<group>"; };
 		1227218A2CBF7A0D000C5E32 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		1227218C2CBF92B4000C5E32 /* Base.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Base.xcassets; sourceTree = "<group>"; };
+		1227218E2CBFA191000C5E32 /* BaseAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAsset.swift; sourceTree = "<group>"; };
 		12A364782BBD11530064FCE2 /* AuthenticationDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDIContainer.swift; sourceTree = "<group>"; };
 		12A3647E2BBD11FC0064FCE2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		12A3647F2BBD11FC0064FCE2 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 			children = (
 				842CD5F02BBC5C5600984066 /* Image-Dev.xcassets */,
 				842CD65C2BBC69BB00984066 /* Image-Prod.xcassets */,
+				1227218C2CBF92B4000C5E32 /* Base.xcassets */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -663,6 +668,7 @@
 		842CD6592BBC697B00984066 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				1227218E2CBFA191000C5E32 /* BaseAsset.swift */,
 				842CD65A2BBC698600984066 /* Images.swift */,
 			);
 			path = Generated;
@@ -760,6 +766,7 @@
 				840292E62BBC6F4E004EE551 /* PoppinsLatin-Regular.ttf in Resources */,
 				842CD5F42BBC5C5600984066 /* Base in Resources */,
 				842CD6272BBC652900984066 /* OnboardingViewController.xib in Resources */,
+				1227218D2CBF92B4000C5E32 /* Base.xcassets in Resources */,
 				12A364902BBD31580064FCE2 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -882,6 +889,7 @@
 				12A3649E2BBD36660064FCE2 /* RegisterViewController.swift in Sources */,
 				842CD5EA2BBC5C5500984066 /* SceneDelegate.swift in Sources */,
 				840292E12BBC6DD0004EE551 /* UserUseCase.swift in Sources */,
+				1227218F2CBFA191000C5E32 /* BaseAsset.swift in Sources */,
 				12A364842BBD120F0064FCE2 /* LoginViewModel.swift in Sources */,
 				842CD6452BBC683E00984066 /* LightColorTheme.swift in Sources */,
 				842CD65B2BBC698600984066 /* Images.swift in Sources */,
@@ -1050,7 +1058,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D6D0AB6AF888D2FE033438E8 /* Pods-HelloWorld.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = "$(VERSION_CODE)";
@@ -1058,7 +1066,10 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "Image*.xcassets";
 				GENERATE_INFOPLIST_FILE = YES;
-				INCLUDED_SOURCE_FILE_NAMES = "$(ASSET_NAME).xcassets";
+				INCLUDED_SOURCE_FILE_NAMES = (
+					"$(ASSET_NAME).xcassets",
+					Base.xcassets,
+				);
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_DISPLAY_NAME)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1088,7 +1099,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B31D31C4ADBFD30603327DC1 /* Pods-HelloWorld.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = "$(VERSION_CODE)";
@@ -1096,7 +1107,10 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				EXCLUDED_SOURCE_FILE_NAMES = "Image*.xcassets";
 				GENERATE_INFOPLIST_FILE = YES;
-				INCLUDED_SOURCE_FILE_NAMES = "$(ASSET_NAME).xcassets";
+				INCLUDED_SOURCE_FILE_NAMES = (
+					"$(ASSET_NAME).xcassets",
+					Base.xcassets,
+				);
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_DISPLAY_NAME)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
