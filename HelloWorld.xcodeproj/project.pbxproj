@@ -11,6 +11,8 @@
 		1227218B2CBF7A0D000C5E32 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227218A2CBF7A0D000C5E32 /* Configuration.swift */; };
 		1227218D2CBF92B4000C5E32 /* Base.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1227218C2CBF92B4000C5E32 /* Base.xcassets */; };
 		1227218F2CBFA191000C5E32 /* BaseAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227218E2CBFA191000C5E32 /* BaseAsset.swift */; };
+		1289A6AA2CC6335C00F950BD /* UIImage+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1289A6A92CC6335C00F950BD /* UIImage+Utilities.swift */; };
+		1289A6AC2CC6379B00F950BD /* ListViewCell+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1289A6AB2CC6379B00F950BD /* ListViewCell+Utilities.swift */; };
 		12A364792BBD11530064FCE2 /* AuthenticationDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A364782BBD11530064FCE2 /* AuthenticationDIContainer.swift */; };
 		12A364802BBD11FC0064FCE2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12A3647F2BBD11FC0064FCE2 /* LoginViewController.xib */; };
 		12A364812BBD11FC0064FCE2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3647E2BBD11FC0064FCE2 /* LoginViewController.swift */; };
@@ -78,6 +80,8 @@
 		1227218A2CBF7A0D000C5E32 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		1227218C2CBF92B4000C5E32 /* Base.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Base.xcassets; sourceTree = "<group>"; };
 		1227218E2CBFA191000C5E32 /* BaseAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAsset.swift; sourceTree = "<group>"; };
+		1289A6A92CC6335C00F950BD /* UIImage+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Utilities.swift"; sourceTree = "<group>"; };
+		1289A6AB2CC6379B00F950BD /* ListViewCell+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewCell+Utilities.swift"; sourceTree = "<group>"; };
 		12A364782BBD11530064FCE2 /* AuthenticationDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDIContainer.swift; sourceTree = "<group>"; };
 		12A3647E2BBD11FC0064FCE2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		12A3647F2BBD11FC0064FCE2 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -636,6 +640,8 @@
 				842CD64B2BBC688A00984066 /* Color+Utilities.swift */,
 				842CD64D2BBC689700984066 /* UIFont+Utilities.swift */,
 				842CD64F2BBC68A600984066 /* JSONDecoder+Utilities.swift */,
+				1289A6A92CC6335C00F950BD /* UIImage+Utilities.swift */,
+				1289A6AB2CC6379B00F950BD /* ListViewCell+Utilities.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -682,7 +688,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 842CD5F82BBC5C5600984066 /* Build configuration list for PBXNativeTarget "HelloWorld" */;
 			buildPhases = (
-				122721902CBFABDD000C5E32 /* ShellScript */,
 				D4551A8801E82B65507B46F7 /* [CP] Check Pods Manifest.lock */,
 				842CD60B2BBC629000984066 /* Setup Configuration */,
 				842CD60C2BBC62A700984066 /* Swift Gen */,
@@ -759,23 +764,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		122721902CBFABDD000C5E32 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "";
-		};
 		842CD60B2BBC629000984066 /* Setup Configuration */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -866,6 +854,7 @@
 				842CD6202BBC64CA00984066 /* BView.swift in Sources */,
 				1227218B2CBF7A0D000C5E32 /* Configuration.swift in Sources */,
 				12A3648D2BBD30F30064FCE2 /* HomeViewMode.swift in Sources */,
+				1289A6AA2CC6335C00F950BD /* UIImage+Utilities.swift in Sources */,
 				12A364792BBD11530064FCE2 /* AuthenticationDIContainer.swift in Sources */,
 				840292CA2BBC6D22004EE551 /* ApiConstant.swift in Sources */,
 				842CD63C2BBC678500984066 /* SplashViewController.swift in Sources */,
@@ -899,6 +888,7 @@
 				842CD63F2BBC681100984066 /* ThemeManager.swift in Sources */,
 				842CD6322BBC669100984066 /* LocalStorage.swift in Sources */,
 				842CD64A2BBC686C00984066 /* String+Utilities.swift in Sources */,
+				1289A6AC2CC6379B00F950BD /* ListViewCell+Utilities.swift in Sources */,
 				842CD60E2BBC62FB00984066 /* AppAppearance.swift in Sources */,
 				840292D72BBC6D89004EE551 /* UsersResponseDTO+Mapping.swift in Sources */,
 				12A364952BBD32130064FCE2 /* AuthorizedSceneDIContainer.swift in Sources */,
@@ -1078,7 +1068,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "$(SPLASH_STORYBOARD_NAME).storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1119,7 +1109,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "$(SPLASH_STORYBOARD_NAME).storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

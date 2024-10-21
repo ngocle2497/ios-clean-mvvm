@@ -46,29 +46,4 @@ class NetworkService {
             return .failure(.init(code: -100, message: error.localizedDescription))
         }
     }
-    
-//    static func request<T: Codable>(route: API, type: T.Type) -> Observable<T> {
-//        return Observable.create { observer in
-//            NetworkManager.shared.getAPIProvider(type: API.self).request(.users) { result in
-//                switch result {
-//                case .success(let response):
-//                    if response.statusCode == HttpStatusCode.OK.rawValue {
-//                        do {
-//                            let object = try JSONDecoder().decode(T.self, from: response.data)
-//                            observer.onNext(object)
-//                            observer.onCompleted()
-//                        } catch (let error) {
-//                            debugPrint(error.localizedDescription)
-//                            observer.onError(BaseError(code: response.statusCode, message: error.localizedDescription))
-//                        }
-//                    }
-//                case .failure(let error):
-//                    debugPrint(error)
-//                    observer.onError(BaseError(code: -1, message: error.localizedDescription))
-//                }
-//            }
-//
-//            return Disposables.create()
-//        }
-//    }
 }
