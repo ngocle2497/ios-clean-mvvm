@@ -17,31 +17,35 @@ enum FontSize: String {
     case large = "Large"
 }
 
+let GLOBAL_SETTING = GlobalSettings.shared
 
-final class GlobalSettings {
+struct GlobalSettings {
     static let shared: GlobalSettings = GlobalSettings()
     
     private var disposeBag = DisposeBag()
     
-    let language = BehaviorRelay<Language>(value:  LocalStorage.shared.appLanguage!)
-    let theme = BehaviorRelay<ColorTheme>(value: LocalStorage.shared.appTheme!)
-    let fontSize = BehaviorRelay<FontSize>(value:  LocalStorage.shared.appFont!)
+    let language                    = BehaviorRelay<Language>(value: LOCAL_STORAGE.appLanguage!)
+    let theme                       = BehaviorRelay<ColorTheme>(value: LOCAL_STORAGE.appTheme!)
+    let fontSize                    = BehaviorRelay<FontSize>(value: LOCAL_STORAGE.appFont!)
     
     init() {
         ThemeManager.updateFont(fontSize.value)
         ThemeManager.updateTheme(theme.value)
         
-        language.subscribe(with: self) { gs, nextValue in
-            LocalStorage.shared.appLanguage = nextValue
-        }.disposed(by: disposeBag)
+        language.skip(1).subscribe(onNext:  { nextValue in
+            LOCAL_STORAGE.appLanguage     = nextValue
+        })
+        .disposed(by: disposeBag)
         
-        theme.subscribe(with: self) { gs, nextValue in
-            LocalStorage.shared.appTheme = nextValue
-        }.disposed(by: disposeBag)
+        theme.skip(1).subscribe(onNext:     { nextValue in
+            LOCAL_STORAGE.appTheme        = nextValue
+        })
+        .disposed(by: disposeBag)
         
-        fontSize.subscribe(with: self) { gs, nextValue in
-            LocalStorage.shared.appFont = nextValue
-        }.disposed(by: disposeBag)
+        fontSize.skip(1).subscribe(onNext:  { nextValue in
+            LOCAL_STORAGE.appFont         = nextValue
+        })
+        .disposed(by: disposeBag)
     }
     
     func updateLanguage(lang: Language) {

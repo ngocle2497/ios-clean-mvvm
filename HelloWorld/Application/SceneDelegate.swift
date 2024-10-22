@@ -16,6 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let navigation = UINavigationController()
         navigation.isNavigationBarHidden = true
+        navigation.delegate = self
         window?.rootViewController = navigation
         if #available(iOS 15.0, *) {
             UITableView.appearance().sectionHeaderTopPadding = 0
@@ -54,7 +55,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
 
+extension SceneDelegate: UINavigationControllerDelegate {
+    func navigationControllerSupportedInterfaceOrientations(_ navigationController: UINavigationController) -> UIInterfaceOrientationMask {
+        return navigationController.topViewController?.supportedInterfaceOrientations ?? .all
+    }
+}

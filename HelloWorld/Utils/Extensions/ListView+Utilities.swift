@@ -21,3 +21,14 @@ extension UICollectionViewCell {
     }
 }
 
+extension UITableView {
+    func register<T: UITableViewCell>(cell: T.Type) {
+        self.register(cell.uiNib, forCellReuseIdentifier: cell.identifier)
+    }
+}
+
+extension UICollectionView {
+    func register<T: UICollectionViewCell>(cell: T.Type) {
+        self.register(cell.uiNib, forCellWithReuseIdentifier: cell.identifier)
+    }
+}

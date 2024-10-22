@@ -5,9 +5,8 @@ class LoginViewController: ViewController<LoginViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    static func create(with viewModal: LoginViewModel) -> LoginViewController {
-        let vc =  LoginViewController(vm: viewModal)
-        return vc
+    static func create(with viewModel: LoginViewModel) -> LoginViewController {
+        return LoginViewController(vm: viewModel)
     }
     
     @IBAction func onLoginButtonPressed(_ sender: UIButton) {

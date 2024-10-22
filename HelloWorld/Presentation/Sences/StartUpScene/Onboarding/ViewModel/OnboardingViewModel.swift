@@ -31,7 +31,7 @@ final class OnboardingViewModel: ViewModel, OnboardingViewModelInput, Onboarding
 extension OnboardingViewModel {
     func saveConfigOnboardingShown() {
         // TODO: Save config Onboarding screen shown.
-        LocalStorage.shared.onboardingShown = true
+        LOCAL_STORAGE.onboardingShown = true
         actions?.showAuthenticationScreen(true)
     }
 }

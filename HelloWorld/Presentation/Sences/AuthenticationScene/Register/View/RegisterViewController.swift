@@ -1,20 +1,16 @@
 import UIKit
 
-class RegisterViewController: ViewController<RegisterViewModel>, UIGestureRecognizerDelegate {
-
+class RegisterViewController: ViewController<RegisterViewModel> {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.interactivePopGestureRecognizer?.delegate = self
-
-        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
 
     }
-
+    
     static func create(with viewModel: RegisterViewModel) -> RegisterViewController {
-        let vc = RegisterViewController(vm: viewModel)
-        return vc
+        return RegisterViewController(vm: viewModel)
     }
-
+    
     @IBAction func onBackButtonPressed(_ sender: Any) {
         vm.popToLogin()
     }

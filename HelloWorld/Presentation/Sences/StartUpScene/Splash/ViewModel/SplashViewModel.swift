@@ -37,8 +37,8 @@ extension SplashViewModel {
     }
     
     func showNextScreen() {
-        if LocalStorage.shared.onboardingShown {
-            if LocalStorage.shared.appToken != nil {
+        if LOCAL_STORAGE.onboardingShown {
+            if LOCAL_STORAGE.appToken != nil {
                 actions?.showAuthorizedScreen(false)
             } else {
                 actions?.showAuthenticationScreen(false)

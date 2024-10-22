@@ -1,6 +1,8 @@
 import Foundation
 import MMKV
 
+var LOCAL_STORAGE = LocalStorage.shared
+
 struct LocalStorage {
     static var shared = LocalStorage()
     private var instance: MMKV?

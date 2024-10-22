@@ -6,8 +6,8 @@ class HomeViewController: ViewController<HomeViewModel> {
         super.viewDidLoad()
     }
     
-    static func create(with viewModal: HomeViewModel) -> HomeViewController {
-        let vc =  HomeViewController(vm: viewModal)
+    static func create(with viewModel: HomeViewModel) -> HomeViewController {
+        let vc =  HomeViewController(vm: viewModel)
         return vc
     }
     @IBAction func onLogoutButtonPressed(_ sender: Any) {

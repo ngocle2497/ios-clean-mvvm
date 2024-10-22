@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class BView: UIView {
+class BaseView: UIView {
     lazy var nibName = String(describing: type(of: self))
     
     private var contentView: UIView!

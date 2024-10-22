@@ -6,8 +6,8 @@ class OnboardingViewController: ViewController<OnboardingViewModel> {
         super.viewDidLoad()
     }
     
-    static func create(with viewModal: OnboardingViewModel) -> OnboardingViewController {
-        let vc = OnboardingViewController(vm: viewModal)
+    static func create(with viewModel: OnboardingViewModel) -> OnboardingViewController {
+        let vc = OnboardingViewController(vm: viewModel)
         return vc
     }
     

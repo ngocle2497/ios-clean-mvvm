@@ -24,7 +24,8 @@ protocol FontProtocol {
     var title2Bold: UIFont { get }
 }
 
-
+let COLORS_THEME = ThemeManager.colorShared
+let FONTS_THEME = ThemeManager.fontShared
 
 struct ThemeManager {
     fileprivate static var colorShared: ColorProtocol = DarkColorTheme()
@@ -51,48 +52,48 @@ struct ThemeManager {
 extension UIFont {
     static var heading1: UIFont {
         get {
-            ThemeManager.fontShared.heading1
+            FONTS_THEME.heading1
         }
     }
     static var heading2: UIFont {
         get {
-            ThemeManager.fontShared.heading2
+            FONTS_THEME.heading2
         }
     }
     
     static var heading3: UIFont {
         get {
-            ThemeManager.fontShared.heading3
+            FONTS_THEME.heading3
         }
     }
     
     static var heading4: UIFont {
         get {
-            ThemeManager.fontShared.heading4
+            FONTS_THEME.heading4
         }
     }
     
     static var title1Regular: UIFont {
         get {
-            ThemeManager.fontShared.title1Regular
+            FONTS_THEME.title1Regular
         }
     }
     
     static var title1Bold: UIFont {
         get {
-            ThemeManager.fontShared.title1Bold
+            FONTS_THEME.title1Bold
         }
     }
     
     static var title2Regular: UIFont {
         get {
-            ThemeManager.fontShared.title2Regular
+            FONTS_THEME.title2Regular
         }
     }
     
     static  var title2Bold: UIFont {
         get {
-            ThemeManager.fontShared.title2Bold
+            FONTS_THEME.title2Bold
         }
     }
 }
@@ -100,37 +101,37 @@ extension UIFont {
 extension UIColor {
     static var primary: UIColor {
         get {
-            return ThemeManager.colorShared.primary
+            return COLORS_THEME.primary
         }
     }
     
     static var primaryFocus: UIColor {
         get {
-            ThemeManager.colorShared.primaryFocus
+            COLORS_THEME.primaryFocus
         }
     }
     
     static var primaryContent: UIColor {
         get {
-            ThemeManager.colorShared.primaryContent
+            COLORS_THEME.primaryContent
         }
     }
     
     static var secondary: UIColor {
         get {
-            ThemeManager.colorShared.secondary
+            COLORS_THEME.secondary
         }
     }
     
     static var secondaryFocus: UIColor {
         get {
-            ThemeManager.colorShared.secondaryFocus
+            COLORS_THEME.secondaryFocus
         }
     }
     
     static var secondaryContent: UIColor {
         get {
-            ThemeManager.colorShared.secondaryContent
+            COLORS_THEME.secondaryContent
         }
     }
 }

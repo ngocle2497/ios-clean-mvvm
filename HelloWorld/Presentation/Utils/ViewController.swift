@@ -2,16 +2,51 @@ import Foundation
 import UIKit
 import RxSwift
 
-class ViewController<VM: ViewModel>: UIViewController {
+class ViewController<VM: ViewModel>: UIViewController, UIGestureRecognizerDelegate {
      
     private let viewModel: VM!
+    
+    let disposeBag = DisposeBag()
+
     var vm: VM {
         get {
             return viewModel
         }
     }
     
-    let disposeBag = DisposeBag()
+    var statusBarStyle: UIStatusBarStyle = .darkContent {
+        didSet {
+            self.updateStatusBar()
+        }
+    }
+    
+    var screenOrientations: UIInterfaceOrientationMask = .portrait {
+        didSet {
+            if #available(iOS 16.0, *) {
+                self.navigationController?.setNeedsUpdateOfSupportedInterfaceOrientations()
+            } else {
+                UIDevice.current.setValue(screenOrientations, forKey: "orientation")
+            }
+        }
+    }
+
+    var getureEnabled = true {
+        didSet {
+            self.navigationController?.interactivePopGestureRecognizer?.isEnabled = getureEnabled
+        }
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask  {
+        get {
+            return screenOrientations
+        }
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return statusBarStyle
+        }
+    }
 
     required init(vm: VM, nibName nibNameOrNil: String? = nil, bundle nibBundleOrNil: Bundle? = nil) {
         viewModel = vm
@@ -22,10 +57,15 @@ class ViewController<VM: ViewModel>: UIViewController {
             super.init(nibName: resourceName, bundle: nibBundleOrNil)
         }
     }
-
+    
     required init?(coder: NSCoder) {
         self.viewModel = nil
         super.init(coder: coder)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        screenOrientations = .portrait
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,26 +75,29 @@ class ViewController<VM: ViewModel>: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
         setup()
         setupRx()
     }
     
-    func updateStatusBar() {
+    // MARK: - Private ==============
+    private func updateStatusBar() {
         UIView.animate(withDuration: 0.3) {
             self.setNeedsStatusBarAppearanceUpdate()
         }
     }
-    
+
+    // MARK: - Public ==============
     func setup() {
-        GlobalSettings.shared.theme.subscribe(with: self) { vc, _ in
+        GLOBAL_SETTING.theme.subscribe(with: self) { vc, _ in
             vc.themeUpdate()
         }.disposed(by: disposeBag)
         
-        GlobalSettings.shared.language.subscribe(with: self) { vc, _ in
+        GLOBAL_SETTING.language.subscribe(with: self) { vc, _ in
             vc.languageUpdate()
         }.disposed(by: disposeBag)
         
-        GlobalSettings.shared.fontSize.subscribe(with: self) { vc, _ in
+        GLOBAL_SETTING.fontSize.subscribe(with: self) { vc, _ in
             vc.fontSizeUpdate()
         }.disposed(by: disposeBag)
     }

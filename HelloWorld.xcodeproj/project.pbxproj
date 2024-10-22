@@ -12,7 +12,7 @@
 		1227218D2CBF92B4000C5E32 /* Base.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1227218C2CBF92B4000C5E32 /* Base.xcassets */; };
 		1227218F2CBFA191000C5E32 /* BaseAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227218E2CBFA191000C5E32 /* BaseAsset.swift */; };
 		1289A6AA2CC6335C00F950BD /* UIImage+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1289A6A92CC6335C00F950BD /* UIImage+Utilities.swift */; };
-		1289A6AC2CC6379B00F950BD /* ListViewCell+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1289A6AB2CC6379B00F950BD /* ListViewCell+Utilities.swift */; };
+		1289A6AC2CC6379B00F950BD /* ListView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1289A6AB2CC6379B00F950BD /* ListView+Utilities.swift */; };
 		12A364792BBD11530064FCE2 /* AuthenticationDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A364782BBD11530064FCE2 /* AuthenticationDIContainer.swift */; };
 		12A364802BBD11FC0064FCE2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12A3647F2BBD11FC0064FCE2 /* LoginViewController.xib */; };
 		12A364812BBD11FC0064FCE2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A3647E2BBD11FC0064FCE2 /* LoginViewController.swift */; };
@@ -52,7 +52,7 @@
 		842CD6132BBC637800984066 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD6122BBC637800984066 /* AppDIContainer.swift */; };
 		842CD6152BBC639A00984066 /* StartUpSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD6142BBC639A00984066 /* StartUpSceneDIContainer.swift */; };
 		842CD6192BBC642C00984066 /* StartUpFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD6182BBC642C00984066 /* StartUpFlowCoordinator.swift */; };
-		842CD6202BBC64CA00984066 /* BView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD61F2BBC64CA00984066 /* BView.swift */; };
+		842CD6202BBC64CA00984066 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD61F2BBC64CA00984066 /* BaseView.swift */; };
 		842CD6222BBC64E200984066 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD6212BBC64E200984066 /* ViewController.swift */; };
 		842CD6242BBC64FE00984066 /* InactiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CD6232BBC64FE00984066 /* InactiveView.swift */; };
 		842CD6272BBC652900984066 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842CD6262BBC652900984066 /* OnboardingViewController.xib */; };
@@ -81,7 +81,7 @@
 		1227218C2CBF92B4000C5E32 /* Base.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Base.xcassets; sourceTree = "<group>"; };
 		1227218E2CBFA191000C5E32 /* BaseAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAsset.swift; sourceTree = "<group>"; };
 		1289A6A92CC6335C00F950BD /* UIImage+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Utilities.swift"; sourceTree = "<group>"; };
-		1289A6AB2CC6379B00F950BD /* ListViewCell+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewCell+Utilities.swift"; sourceTree = "<group>"; };
+		1289A6AB2CC6379B00F950BD /* ListView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListView+Utilities.swift"; sourceTree = "<group>"; };
 		12A364782BBD11530064FCE2 /* AuthenticationDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDIContainer.swift; sourceTree = "<group>"; };
 		12A3647E2BBD11FC0064FCE2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		12A3647F2BBD11FC0064FCE2 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 		842CD6122BBC637800984066 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		842CD6142BBC639A00984066 /* StartUpSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpSceneDIContainer.swift; sourceTree = "<group>"; };
 		842CD6182BBC642C00984066 /* StartUpFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpFlowCoordinator.swift; sourceTree = "<group>"; };
-		842CD61F2BBC64CA00984066 /* BView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BView.swift; sourceTree = "<group>"; };
+		842CD61F2BBC64CA00984066 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		842CD6212BBC64E200984066 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		842CD6232BBC64FE00984066 /* InactiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InactiveView.swift; sourceTree = "<group>"; };
 		842CD6252BBC652900984066 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +163,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1294D1552CC7647F00401985 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				842CD6492BBC686C00984066 /* String+Utilities.swift */,
+				842CD64B2BBC688A00984066 /* Color+Utilities.swift */,
+				842CD64D2BBC689700984066 /* UIFont+Utilities.swift */,
+				842CD64F2BBC68A600984066 /* JSONDecoder+Utilities.swift */,
+				1289A6A92CC6335C00F950BD /* UIImage+Utilities.swift */,
+				1289A6AB2CC6379B00F950BD /* ListView+Utilities.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1294D1562CC7649500401985 /* Theming */ = {
+			isa = PBXGroup;
+			children = (
+				1294D1582CC764CE00401985 /* Font */,
+				1294D1572CC764BE00401985 /* Color */,
+				842CD63E2BBC681100984066 /* ThemeManager.swift */,
+			);
+			path = Theming;
+			sourceTree = "<group>";
+		};
+		1294D1572CC764BE00401985 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				842CD6442BBC683E00984066 /* LightColorTheme.swift */,
+				842CD6462BBC684C00984066 /* DarkColorTheme.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		1294D1582CC764CE00401985 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				842CD6412BBC682A00984066 /* DefaultFont.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		1294D1592CC764E500401985 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				842CD62E2BBC667300984066 /* GlobalSettings.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		1294D15A2CC764FA00401985 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				842CD6312BBC669100984066 /* LocalStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		12A3647A2BBD11CF0064FCE2 /* AuthenticationScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,10 +518,10 @@
 		842CD6032BBC60D500984066 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				842CD6482BBC686100984066 /* Extensions */,
-				842CD63D2BBC67FF00984066 /* Theming */,
-				842CD62D2BBC665F00984066 /* Global */,
-				842CD6302BBC668100984066 /* Storage */,
+				1294D15A2CC764FA00401985 /* Storage */,
+				1294D1592CC764E500401985 /* Global */,
+				1294D1562CC7649500401985 /* Theming */,
+				1294D1552CC7647F00401985 /* Extensions */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -551,7 +607,7 @@
 		842CD61E2BBC64BE00984066 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				842CD61F2BBC64CA00984066 /* BView.swift */,
+				842CD61F2BBC64CA00984066 /* BaseView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -562,22 +618,6 @@
 				842CD62A2BBC655600984066 /* OnboardingViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		842CD62D2BBC665F00984066 /* Global */ = {
-			isa = PBXGroup;
-			children = (
-				842CD62E2BBC667300984066 /* GlobalSettings.swift */,
-			);
-			name = Global;
-			sourceTree = "<group>";
-		};
-		842CD6302BBC668100984066 /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-				842CD6312BBC669100984066 /* LocalStorage.swift */,
-			);
-			name = Storage;
 			sourceTree = "<group>";
 		};
 		842CD6342BBC672D00984066 /* Splash */ = {
@@ -604,46 +644,6 @@
 				842CD6372BBC675600984066 /* SplashViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		842CD63D2BBC67FF00984066 /* Theming */ = {
-			isa = PBXGroup;
-			children = (
-				842CD6432BBC683500984066 /* Color */,
-				842CD6402BBC682100984066 /* Font */,
-				842CD63E2BBC681100984066 /* ThemeManager.swift */,
-			);
-			name = Theming;
-			sourceTree = "<group>";
-		};
-		842CD6402BBC682100984066 /* Font */ = {
-			isa = PBXGroup;
-			children = (
-				842CD6412BBC682A00984066 /* DefaultFont.swift */,
-			);
-			name = Font;
-			sourceTree = "<group>";
-		};
-		842CD6432BBC683500984066 /* Color */ = {
-			isa = PBXGroup;
-			children = (
-				842CD6442BBC683E00984066 /* LightColorTheme.swift */,
-				842CD6462BBC684C00984066 /* DarkColorTheme.swift */,
-			);
-			name = Color;
-			sourceTree = "<group>";
-		};
-		842CD6482BBC686100984066 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				842CD6492BBC686C00984066 /* String+Utilities.swift */,
-				842CD64B2BBC688A00984066 /* Color+Utilities.swift */,
-				842CD64D2BBC689700984066 /* UIFont+Utilities.swift */,
-				842CD64F2BBC68A600984066 /* JSONDecoder+Utilities.swift */,
-				1289A6A92CC6335C00F950BD /* UIImage+Utilities.swift */,
-				1289A6AB2CC6379B00F950BD /* ListViewCell+Utilities.swift */,
-			);
-			name = Extensions;
 			sourceTree = "<group>";
 		};
 		842CD6512BBC691000984066 /* Localizable */ = {
@@ -851,7 +851,7 @@
 				840292DE2BBC6DBF004EE551 /* UserRepository.swift in Sources */,
 				842CD6472BBC684C00984066 /* DarkColorTheme.swift in Sources */,
 				842CD6132BBC637800984066 /* AppDIContainer.swift in Sources */,
-				842CD6202BBC64CA00984066 /* BView.swift in Sources */,
+				842CD6202BBC64CA00984066 /* BaseView.swift in Sources */,
 				1227218B2CBF7A0D000C5E32 /* Configuration.swift in Sources */,
 				12A3648D2BBD30F30064FCE2 /* HomeViewMode.swift in Sources */,
 				1289A6AA2CC6335C00F950BD /* UIImage+Utilities.swift in Sources */,
@@ -888,7 +888,7 @@
 				842CD63F2BBC681100984066 /* ThemeManager.swift in Sources */,
 				842CD6322BBC669100984066 /* LocalStorage.swift in Sources */,
 				842CD64A2BBC686C00984066 /* String+Utilities.swift in Sources */,
-				1289A6AC2CC6379B00F950BD /* ListViewCell+Utilities.swift in Sources */,
+				1289A6AC2CC6379B00F950BD /* ListView+Utilities.swift in Sources */,
 				842CD60E2BBC62FB00984066 /* AppAppearance.swift in Sources */,
 				840292D72BBC6D89004EE551 /* UsersResponseDTO+Mapping.swift in Sources */,
 				12A364952BBD32130064FCE2 /* AuthorizedSceneDIContainer.swift in Sources */,
@@ -1063,11 +1063,10 @@
 					Base.xcassets,
 				);
 				INFOPLIST_FILE = HelloWorld/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_DISPLAY_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = "Hello World";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "$(SPLASH_STORYBOARD_NAME).storyboard";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UILaunchStoryboardName = DefaultLaunch.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1104,11 +1103,10 @@
 					Base.xcassets,
 				);
 				INFOPLIST_FILE = HelloWorld/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(APP_DISPLAY_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = "Hello World";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "$(SPLASH_STORYBOARD_NAME).storyboard";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UILaunchStoryboardName = DefaultLaunch.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

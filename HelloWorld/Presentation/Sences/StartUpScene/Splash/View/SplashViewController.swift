@@ -10,9 +10,8 @@ class SplashViewController: ViewController<SplashViewModel> {
         hideSplash()
     }
 
-    static func create(with viewModal: SplashViewModel) -> SplashViewController{
-        let vc =  SplashViewController(vm: viewModal)
-        return vc
+    static func create(with viewModel: SplashViewModel) -> SplashViewController{
+        return SplashViewController(vm: viewModel)
     }
     
     private func hideSplash() {

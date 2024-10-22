@@ -30,7 +30,7 @@ final class HomeViewModel:ViewModel, HomeViewModelType {
 // MARK: - Input
 extension HomeViewModel {
     func logout() {
-        LocalStorage.shared.appToken = nil
+        LOCAL_STORAGE.appToken = nil
         actions?.logout();
     }
 }
